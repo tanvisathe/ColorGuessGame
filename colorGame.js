@@ -3,6 +3,7 @@ var colors =generateRandomColors(6);
 var squares =  document.querySelectorAll(".square");
  var pickedColor = pickColor();
  var ColorDisplay = document.getElementById("colorDisplay");
+ var h1 = document.querySelector("h1");
  ColorDisplay.textContent = pickedColor;
  var messageDisplay = document.getElementById("message");
 for(var i=0; i<squares.length; i++){
@@ -13,9 +14,12 @@ for(var i=0; i<squares.length; i++){
         //grab color of picked square
         var clickedColor= this.style.backgroundColor;
         //compare color to pickedcolor
+        console.log(clickedColor, pickedColor);
         if(clickedColor === pickedColor){
            messageDisplay.textContent = "Correct!";
            changeColors(clickedColor);
+           // h1 background changes to corerct guessed color
+           h1.style.backgroundColor = clickedColor;
         }
         else{
             this.style.backgroundColor= "#232323";
@@ -58,6 +62,6 @@ function randomColor(){
     // pick a blue from 0 - 255
     var  b = Math.floor(Math.random() * 256);
    
-    return "rgb(" + r + "," + g + "," + b + ")";
+    return "rgb(" + r + ", " + g + ", " + b + ")";
 }
 
