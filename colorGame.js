@@ -50,6 +50,8 @@
      pickedColor = pickColor();
      //change colorDisplay to match picked color
      ColorDisplay.textContent = pickedColor;
+     this.textContent ="New Colors";
+     messageDisplay.textContent = "";
      // change colors of squares
      for(var i=0; i<squares.length;i++){
         //change color of squares to match the pickedcolor
