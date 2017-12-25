@@ -55,7 +55,7 @@
         //change color of squares to match the pickedcolor
         squares[i].style.backgroundColor = colors[i];
        }
-       h1.style.backgroundColor = "#232323";    
+       h1.style.backgroundColor = "steelblue";    
 
  });
 
@@ -80,10 +80,8 @@ for(var i=0; i<squares.length; i++){
         else{
             this.style.backgroundColor= "#232323";
             messageDisplay.textContent= "Try Again";
-        }
-        
+        }      
     }); 
- 
 }
 
 function changeColors(color){
@@ -91,8 +89,7 @@ function changeColors(color){
     for(var i=0; i<squares.length;i++){
         //change color of squares to match the pickedcolor
         squares[i].style.backgroundColor = color;
-    }
-    
+    }    
 }
 
 function pickColor() {
